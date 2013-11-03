@@ -1,4 +1,4 @@
-import random
+from random import randint, seed
 
 def generate(longUrl):
 
@@ -6,16 +6,16 @@ def generate(longUrl):
     urlKey = []
     
     # seed the random number generator
-    random.seed()
+    seed()
 
     i = [0, 0, 0]
     for x in range(0,7):
         
-        i[0] = random.randint(48,57)
-        i[1] = random.randint(65,90)
-        i[2] = random.randint(97, 122)
+        i[0] = randint(48,57)
+        i[1] = randint(65,90)
+        i[2] = randint(97, 122)
     
-        urlKey.append(chr(i[random.randint(0,2)]))
+        urlKey.append(chr(i[randint(0,2)]))
         
     return ''.join(urlKey)
 
