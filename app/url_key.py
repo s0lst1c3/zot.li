@@ -8,6 +8,7 @@ def generate(longUrl):
     # seed the random number generator
     seed()
 
+	# generate the urlKey
     i = [0, 0, 0]
     for x in range(0,7):
         
