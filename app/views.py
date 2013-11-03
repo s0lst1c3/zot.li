@@ -24,6 +24,7 @@ def index():
         return render_template('index.html', shortUrl=URL+shortUrl)
 
     elif request.method == 'GET':
+
         shortUrl = request.query_string
         if shortUrl in fakeDB:
             return redirect(fakeDB[shortUrl])
