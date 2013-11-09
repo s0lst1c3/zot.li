@@ -4,8 +4,6 @@ from app import app
 from flask import request, render_template, redirect
 from db_ops import db_retrieve, db_update
 
-# configurations
-app.debug = True
 URL = '127.0.0.1:5000?'
 
 @app.route('/', methods=['POST','GET'])
@@ -23,7 +21,5 @@ def index():
             return render_template('index.html')
         return redirect(shortUrl)
     
-if __name__ == '__main__':
-    app.run()
 
 
