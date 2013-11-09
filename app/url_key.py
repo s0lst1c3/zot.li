@@ -25,3 +25,14 @@ def sanitize(longUrl):
     if longUrl[:7] != 'http://':
         return 'http://'+longUrl
     return longUrl
+
+def increment(shortUrl):
+
+    # split the urlKey into a list of chars
+    splitUrl = shortUrl.split()
+
+    # increment a randomvalue
+    splitUrl[0] += 1
+    splitUrl[0] %= 57 + 48
+
+    return ''.join(splitUrl)
