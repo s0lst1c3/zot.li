@@ -31,8 +31,7 @@ def increment(shortUrl):
     # split the urlKey into a list of chars
     splitUrl = shortUrl.split()
 
-    # increment a randomvalue
-    splitUrl[0] += 1
-    splitUrl[0] %= 57 + 48
+    # increment by one
+    splitUrl = char((ord(splitUrl[0])+1)%57+48)
 
     return ''.join(splitUrl)

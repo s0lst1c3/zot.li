@@ -1,10 +1,8 @@
 # imports
 import sys, os
-
-from flask import Flask, request, render_template, redirect, url_for
-
-# initializations
-app = Flask(__name__)
+from app import app
+from flask import request, render_template, redirect
+from db_ops import db_retrieve, db_update
 
 # configurations
 app.debug = True
