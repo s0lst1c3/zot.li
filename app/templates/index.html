@@ -3,9 +3,9 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    	<link rel="shortcut icon" href="../static/img/favicon.png">
+    	<link rel="shortcut icon" href="../static/img/favicon.ico">
 
-		<title>betterbit.li</title>
+		<title>zot.li</title>
 
 		<link href="../static/css/bootstrap.css" rel="stylesheet">
 		<link href="../static/css/style.css" rel="stylesheet">
@@ -17,8 +17,8 @@
 		<div class="container">
 			<img src="../static/img/devil.gif">
 			<form class="form-signin" method="POST" name="longurl">
-				<h2 class="form-signin-heading" >Betterbit.li</h2>
-				<h4 class="form-signin-heading" >More length, less bullshit.</h4>
+				<h2 class="form-signin-heading" >zot.li</h2>
+				<h4 class="form-signin-heading" >A simple url shrinker.</h4>
 				<input type="text"  name="longUrl" 
 					class="form-control" 
 					placeholder="Enter your long url here" autofocus>
@@ -26,7 +26,7 @@
 				<button class="btn btn-lg btn-primary " type="submit">Shrink it</button>
 			</form>
 			<form class=form-signin">
-				<textarea name="shorturl" 
+				<textarea onclick="this.select()" name="shorturl" 
 					class="form-control" 
 					placeholder="Your short url will appear here" 
 					autofocus>{{shortUrl}}</textarea>

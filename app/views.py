@@ -9,16 +9,19 @@ URL = '127.0.0.1:5000?'
 @app.route('/', methods=['POST','GET'])
 def index():
 
-    if request.method == 'POST':
+    if request.method == 'POST':	
 
-        shortUrl = db_update(request.form['longUrl'])
+        longUrl = request.form['longUrl']
+        shortUrl = db_update(longUrl)
+
         return render_template('index.html', shortUrl=URL+shortUrl)
 
     elif request.method == 'GET':
 
         shortUrl = db_retrieve(request.query_string)
         if shortUrl == None:
-            return render_template('index.html')
+            return render_template('index.html',\
+                                shortUrl='Your short url will appear here.')
         return redirect(shortUrl)
     
 
