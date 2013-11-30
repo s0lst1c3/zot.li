@@ -4,7 +4,7 @@ from app import app
 from flask import request, render_template, redirect
 from db_ops import db_retrieve, db_update
 
-URL = '127.0.0.1:5000?'
+URL = 'zot.li/?'
 
 @app.route('/', methods=['POST','GET'])
 def index():
