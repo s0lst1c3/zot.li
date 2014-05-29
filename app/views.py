@@ -23,6 +23,5 @@ def index():
             return render_template('index.html',\
                                 shortUrl='Your short url will appear here.')
         return redirect(shortUrl)
-    
 
 
